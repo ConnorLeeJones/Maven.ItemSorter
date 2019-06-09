@@ -16,10 +16,17 @@ public class ItemSorter {
     }
 
     public Item[] sort(Comparator<Item> comparator) {
-        ArrayList<Item> itemsList = new ArrayList<Item>(Arrays.asList(items));
-        Collections.sort(itemsList, comparator);
-        items = new Item[itemsList.size()];
-        items = itemsList.toArray(items);
+
+        Arrays.sort(items, comparator);
         return items;
+
+
+        //ArrayList<Item> itemsList = new ArrayList<Item>(Arrays.asList(items));
+        //Collections.sort(itemsList, comparator);
+        //items = new Item[itemsList.size()];
+        //items = itemsList.toArray(items);
+        //return items;
+
+
     }
 }
